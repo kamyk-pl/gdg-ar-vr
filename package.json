@@ -1,0 +1,37 @@
+{
+  "name": "gdg-presentation",
+  "version": "0.0.1",
+  "license": "",
+  "angular-cli": {},
+  "watch": {
+    "pug": {
+      "patterns": [
+        "slides",
+        "."
+      ],
+      "extensions": "pug",
+      "quiet": false
+    }
+  },
+  "scripts": {
+    "start": "node node_modules/http-server/bin/http-server -p4200",
+    "reload": "node node_modules/reload/bin/reload -b -p 4200",
+    "compile": "node node_modules/pug-cli/index -P index.pug",
+    "pug": "npm run compile",
+    "watch": "npm-watch pug",
+    "work": "run-p watch  reload",
+    "deploy": "gh-pages -d ."
+  },
+  "private": true,
+  "devDependencies": {
+    "gh-pages": "^2.1.1",
+    "http-server": "^0.11.1",
+    "npm-run-all": "^4.1.5",
+    "reload": "^3.0.1"
+  },
+  "dependencies": {
+    "npm-watch": "^0.6.0",
+    "pug": "^2.0.4",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}

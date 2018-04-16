@@ -1,0 +1,24 @@
+extends layout.pug 
+
+block vars
+  - var title = 'follow-me'
+
+block title
+        | Follow me
+block content
+        ul.flex.no-bullet
+                li.fragment
+                        a(href="https://kamyk-pl.github.io/gdg-ar-vr/#/follow-me-15")
+                                | kamyk-pl.github.io/
+                                br
+                                |gdg-ar-vr/#/follow-me-15
+
+                        img(src="img/qr.png" alt="qr code with link to presentation" style="margin: 0 20%")
+                li.fragment.tac
+                        p.quote.tac State for 12.11.2019
+                                br
+                                | setting the WebXR flags is not required anymore
+                                | for Chrome > 78
+
+                        img(src="img/flags.gif" alt="how to set chrome flags")
+

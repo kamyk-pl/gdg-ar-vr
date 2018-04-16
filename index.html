@@ -1,0 +1,513 @@
+<!DOCTYPE html >
+<html lang="en">
+  <head>
+    <title>WebXR</title>
+    <meta charset="utf-8"/>
+    <meta name="author" content=" "/>
+    <meta name="description" content="AR / VR in the browser"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <link href="reveal.js-3.8.0/css/reveal.css" rel="stylesheet"/>
+    <link href="reveal.js-3.8.0/css/theme/white.css" rel="stylesheet"/>
+    <link href="common/css/common.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/><!-- Theme used for syntax highlighting of code -->
+    <link href="reveal.js-3.8.0/lib/css/zenburn.css" rel="stylesheet"/>
+    <script>
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match(/print-pdf/gi) ? 'reveal.js-3.8.0/css/print/pdf.css' : 'reveal.js-3.8.0/css/print/paper.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+      
+      
+      
+    </script>
+  </head>
+</html>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class="center" id="title-0" data-transition="slide">
+        <h2 class="header"></h2>
+        <div>
+          <div class="flex"><img src="img/around-the-corner.jpg" alt="around the corner"/>
+            <h2 style="font-size:1.5em; line-height:1; margin-top:10px">
+              AR and VR in your browser
+              are
+              just around the corner<br/>
+            </h2>
+          </div>
+          <p style="text-align: right; font-size:0.8em">Paweł Kamiński<br/><a class="flex" href="https://twitter.com/kamyk_pl" style="color:black; justify-content: flex-end" target="blank"><img src="img/twitter.png" style="background:white; box-shadow:0 0 0; max-width:65px" alt="twitter logo"/>@kamyk_pl</a></p>
+        </div>
+      </section>
+      <section id="iteratec-1" data-transition="slide">
+        <h2 class="header"><img src="img/iteratec.svg" style="background:white; box-shadow:0 0 0; width:270px;" alt="iteratec logo"/></h2>
+        <div>
+          <ul>
+            <li>iteratec is the gold sponsor of Dev Fest Wrocław</li>
+            <li class="fragment">iteratec 1996</li>
+            <li class="fragment">7 locations (Munich, Dusseldorf, Frankfurt, Hamburg, Stuttgart, Vienna,<img class="abs-images" src="img/Standorte.png" style="left:0%"/><span class="bold">       Wrocław</span>)</li>
+            <li class="fragment">~ 350 employees, 20 in Wrocław office<img class="abs-images" src="img/iteratec-team.jpg" style="left:33%"/></li>
+            <li class="fragment">"Innovation days"<img class="fragment abs-images" src="img/stand.jpg" style="left:66%"/></li>
+          </ul>
+        </div>
+      </section>
+      <section class="center" id="glossary-2" data-transition="slide">
+        <h2 class="header">Glossary</h2>
+        <div></div>
+      </section>
+      <section id="glossary-vr-3" data-transition="slide">
+        <h2 class="header"></h2>
+        <div>
+          <div>
+            <h2>VR - Virtual Reality</h2>
+            <ul>
+              <li class="fragment">
+                <p>stereoscopic view</p><img class="abs-images" src="img/stereo.jpg" style="width:30%; left:0" alt="stereoscopic view"/>
+              </li>
+              <li class="fragment">
+                <p>headset is required</p><img class="abs-images" src="img/oculus.png" style="width:30%; left:33%" alt="headset is required"/>
+              </li>
+              <li class="fragment">
+                <p>view is rendered by device</p>
+              </li>
+              <li class="fragment">
+                <p>3-DoF or 6-DoF</p><img class="abs-images" src="img/6dof3dof.jpg" style="width:30%; left:66%" alt="6dof vs 3dof"/>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="glossary-ar-4" data-transition="slide">
+        <h2 class="header"></h2>
+        <div>
+          <h2>AR - Augmented Reality</h2>
+          <ul>
+            <li class="fragment">real world</li>
+            <li class="fragment">extended by computer generated content</li>
+            <li class="fragment">headset or mobile device required<img class="abs-images" src="img/ar-example.png" style="max-width:45%; left:15%" alt="ar example"/><img class="fragment abs-images" src="img/google-glass.png" style="max-width:45%; left:50%" alt="google glass"/></li>
+          </ul>
+        </div>
+      </section>
+      <section id="glossary-mr-5" data-transition="slide">
+        <h2 class="header"></h2>
+        <div>
+          <div>
+            <h2>MR - Mixed/Merged Reality</h2>
+            <ul class="flex no-bullet">
+              <li class="fragment"><a class="tac" href="https://www.microsoft.com/en-us/hololens">Microsoft Hololens</a><img src="img/holo.jpg" alt="Hololens"/></li>
+              <li class="fragment"><a class="tac" href="https://www.thevoid.com/">The Void</a><iframe width="640" height="281" src="https://www.youtube.com/embed/hLhswj2zFDw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="center" id="glossary-xr-6" data-transition="slide">
+        <h2 class="header">VR + AR + MR + ?R<span class="fragment">
+            <p>=</p>
+            <p class="bigger"> XR</p></span></h2>
+        <div></div>
+      </section>
+      <section class="center" id="why-7" data-transition="slide">
+        <h2 class="header">Why</h2>
+        <div></div>
+      </section>
+      <section id="been-there-done-that-vr-8" data-transition="slide">
+        <h2 class="header">Been there done that</h2>
+        <div>
+          <ul class="flex">
+            <li class="fragment no-bullet"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">The 1990s <a href="https://twitter.com/hashtag/VR?src=hash&amp;ref_src=twsrc%5Etfw">#VR</a> headset no one talks about. <a href="https://twitter.com/hashtag/philips?src=hash&amp;ref_src=twsrc%5Etfw">#philips</a> Scuba. This relic just showed up at the lab. <a href="https://twitter.com/nicomo_cosca?ref_src=twsrc%5Etfw">@nicomo_cosca</a> <a href="https://twitter.com/hashtag/VirtualReality?src=hash&amp;ref_src=twsrc%5Etfw">#VirtualReality</a> <a href="https://twitter.com/hashtag/History?src=hash&amp;ref_src=twsrc%5Etfw">#History</a> <a href="https://t.co/O4ttaFa7lx">pic.twitter.com/O4ttaFa7lx</a></p>&mdash; Sami Hamid (@samihamidvr) <a href="https://twitter.com/samihamidvr/status/793725129872269314?ref_src=twsrc%5Etfw">November 2, 2016</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+            <li class="fragment no-bullet">
+              <p class="tac">Oculus Rift 2016</p><img src="img/oculus.png" alt="Oculus Rift 2016"/>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="been-there-done-that-ar-9" data-transition="slide">
+        <h2 class="header">Been there done that</h2>
+        <div>
+          <ul class="flex">
+            <li class="fragment no-bullet asd tac">
+              <p>Pokemon Go<br/><span class="quote">2016</span></p><img src="img/pokemon-go.png" alt="Pokemon Go" style="max-height:300px"/>
+            </li>
+            <li class="fragment no-bullet asd tac">
+              <p>Mozzies<br/><span class="quote">Symbian OS ~ 2003</span></p><img src="img/Mozzies.png" alt="Symbian Mozzies" style="max-height:265px"/>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="unity-10" data-transition="slide">
+        <h2 class="header"></h2>
+        <div><img src="img/unity.png" style="background:white; box-shadow:0 0 0" alt="Unity logo"/>
+          <p>Since 2015 supports VR</p><iframe width="560" height="315" src="https://www.youtube.com/embed/RnAEO-QlqSg?start=214" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </section>
+      <section id="unreal-11" data-transition="slide">
+        <h2 class="header"></h2>
+        <div><img src="img/unreal.png" style="background:white; box-shadow:0 0 0; max-height: 150px" alt="Unreal logo"/>
+          <p> Impressive AR example in 2017</p><iframe width="560" height="315" src="https://www.youtube.com/embed/S14AVwaBF-Y?start=55" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </section>
+      <section class="center" id="why-12" data-transition="slide">
+        <h2 class="header">Why</h2>
+        <div></div>
+      </section>
+      <section id="google-io-2019-13" data-transition="slide">
+        <h2 class="header">Google I/O</h2>
+        <div>
+          <ul class="flex no-bullet">
+            <li>
+              <p class="tac">Google I/O 2019</p><iframe width="560" height="315" src="https://www.youtube.com/embed/lyRPyRKHO8M?start=517" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </li>
+            <li>
+              <p class="tac">Google I/O 2018</p><iframe width="560" height="315" src="https://www.youtube.com/embed/1t1gBVykneA?start=1252" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="goal-14" data-transition="slide">
+        <h2 class="header">Goal</h2>
+        <div>
+          <ul>
+            <li class="fragment">
+              <p>AR / VR using web technologies</p><img class="abs-images" src="img/impossible.jpg" style="width:30%; left:0; max-height:160px" alt="mohamed ali impossible is nothing"/>
+            </li>
+            <li class="fragment">
+              <p>Show some tools and frameworks</p><img class="abs-images" src="img/tools.png" style="width:30%; left:33%" alt="tools and frameworks"/>
+            </li>
+            <li class="fragment">
+              <p>Do not try this at home</p><img class="abs-images" src="img/dont-try-home.jpg" style="width:30%; left:66%" alt="don't try that at home"/>
+              <div class="fragment"><img class="abs-images" src="img/cross.png" style="width:50px; height:38px; left:30%; top: 78%; background-color: transparent; box-shadow:0 0 0" alt="do try that at home"/><img class="abs-images" src="img/ex.png" style="width:50px; height:38px; left:66%; top: 77%; background-color: transparent;  box-shadow:0 0 0" alt="dot try that at home"/><img class="abs-images" src="img/do-try-home.jpg" style="width:30%; left:66%" alt="do try that at home"/></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="follow-me-15" data-transition="slide">
+        <h2 class="header">Follow me</h2>
+        <div>
+          <ul class="flex no-bullet">
+            <li class="fragment"><a href="https://kamyk-pl.github.io/gdg-ar-vr/#/follow-me-15">kamyk-pl.github.io/<br/>gdg-ar-vr/#/follow-me-15</a><img src="img/qr.png" alt="qr code with link to presentation" style="margin: 0 20%"/></li>
+            <li class="fragment tac">
+              <p class="quote tac">State for 12.11.2019<br/>setting the WebXR flags is not required anymore
+                for Chrome > 78
+              </p><img src="img/flags.gif" alt="how to set chrome flags"/>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="webxr-16" data-transition="slide">
+        <h2 class="header">WebXR</h2>
+        <div>
+          <ul>
+            <li class="fragment">WebVR (2014-2018)</li>
+            <li class="fragment"><a href="https://www.w3.org/immersive-web/">Immersive Web</a>&nbsp; working group at W3C</li>
+            <li class="fragment">Misson: "We help bring high-performance Virtual Reality (VR) and Augmented Reality (AR) (collectively known as XR) to the open Web via APIs to interact with XR devices and sensors in browsers."</li>
+            <li class="fragment"><span class="bold">WebXR Device API</span>  -  low level JavaScript API which exposes the VR platform capabilities</li>
+          </ul>
+        </div>
+      </section>
+      <section id="webxr-status-17" data-transition="slide">
+        <h2 class="header"><a href="https://www.w3.org/TR/webxr/">WebXR</a> W3C Status</h2>
+        <div>
+          <ul class="no-bullet">
+            <li class="done"> W3C receives a Submission</li>
+            <li class="done"> W3C publishes a Note</li>
+            <li class="done"> W3C creates a Working Group</li>
+            <li class="current"> W3C publishes a Working Draft</li>
+            <li class="next"> W3C publishes a Candidate Recommendation (expect 12.2019)</li>
+            <li class="next"> W3C publishes a Proposed Recommendation</li>
+            <li class="next"> W3C publishes a Recommendation</li>
+          </ul>
+        </div>
+      </section>
+      <section id="can-i-use-18" data-transition="slide">
+        <h2 class="header">Can I use WebXR</h2>
+        <div>
+          <div class="fragment"><img src="img/can-i-use-now.jpg" alt="can i use webxr screenshot" style="max-width: 750px;"/>
+            <p class="small">Status for 2019-11-11</p>
+          </div>
+        </div>
+      </section>
+      <section id="can-i-use-10-19" data-transition="slide">
+        <h2 class="header">Can I use WebXR</h2>
+        <div><img src="img/can-i-use.jpg" alt="can i use webxr screenshot" style="max-width: 750px;"/>
+          <p class="small">Status for 2019-10-28</p>
+        </div>
+      </section>
+      <section id="yes-we-can-20" data-transition="slide">
+        <h2 class="header"></h2>
+        <div>
+          <ul class="ywc">
+            <li class="fragment">it works in Chrome</li>
+            <li class="fragment">WebXR Polyfills</li>
+            <li class="fragment">Frameworks</li>
+          </ul>
+        </div>
+      </section>
+      <section class="center" id="webxr-example-21" data-transition="slide">
+        <h2 class="header">
+          <ul class="no-bullet">
+            <li><a href="https://immersive-web.github.io/webxr-samples/" target="blank">WebXR Samples</a></li>
+          </ul>
+        </h2>
+        <div></div>
+      </section>
+      <section class="center" id="model-viewer-example-22" data-transition="slide">
+        <h2 class="header"><a href="https://modelviewer.dev/examples/augmented-reality.html" target="_blank">
+            <div class="flex"><img src="img/model viever.svg" style="background:white; box-shadow:0 0 0; height:150px" alt="Model viewer logo"/>
+              <p>Model Viewer Example</p>
+            </div></a></h2>
+        <div></div>
+      </section>
+      <section class="center" id="aframe-example-23" data-transition="slide">
+        <h2 class="header"><a href="https://aframe.io/" target="_blank"><img src="img/aframe-logo.svg" style="background:white; box-shadow:0 0 0; height:150px" alt="aframe-logo"/></a>
+          <div><a href="https://iteratour.surge.sh/" target="_blank">Iteratour</a></div>
+        </h2>
+        <div></div>
+      </section>
+      <section id="frameworks-24" data-transition="slide">
+        <h2 class="header">other frameworks</h2>
+        <div>
+          <ul class="logos no-bullet">
+            <li><a href="https://facebook.github.io/react-360/" target="_blank"> 
+                <div class="flex"><img src="img/react360.svg" style="box-shadow:0 0 0;"/>
+                  <p>React 360</p>
+                </div></a></li>
+            <li><a href="https://www.babylonjs.com/" target="_blank"> 
+                <div class="flex"><img src="img/babylonjs.svg" style="box-shadow:0 0 0;"/>BabylonJs</div></a></li>
+            <li><a href="https://threejs.org/" target="_blank">
+                <p style="font-family:'Roboto Mono', monospace; color: rgb(4, 158, 244)">three.js</p></a></li>
+          </ul>
+        </div>
+      </section>
+      <section id="vs-native-pros-25" data-transition="slide">
+        <h2 class="header">web vs native apps</h2>
+        <div>
+          <h2>pros</h2>
+          <ul>
+            <li class="fragment">no installation</li>
+            <li class="fragment">no mobile stores restrictions</li>
+            <li class="fragment">fast implementation (one app all platforms)</li>
+            <li class="fragment">low entry threshold</li>
+            <li class="fragment">instant updates</li>
+          </ul>
+        </div>
+      </section>
+      <section id="vs-native-pros-26" data-transition="slide">
+        <h2 class="header">web vs native apps</h2>
+        <div>
+          <h2>pros</h2>
+          <ul>
+            <li class="fragment">security</li>
+            <li class="fragment">3d content can be indexed and searched</li>
+            <li class="fragment">extend current websites</li>
+            <li class="fragment">it is our playground with our tools<br/>(Dev Tools, Npm, VisualCode, ...)</li>
+          </ul>
+        </div>
+      </section>
+      <section id="vs-native-cons-27" data-transition="slide">
+        <h2 class="header">web vs native apps</h2>
+        <div>
+          <h2>cons</h2>
+          <ul>
+            <li class="fragment">it is not yet production ready</li>
+            <li class="fragment">offline resources</li>
+            <li class="fragment">performance</li>
+            <li class="fragment">web limitation (saving files, offline mode, ...)</li>
+          </ul>
+        </div>
+      </section>
+      <section id="challenges-lack-28" data-transition="slide">
+        <h2 class="header">Challenges</h2>
+        <div>
+          <ul>
+            <li class="fragment">
+              <p>lack of 3D models</p>
+              <div class="fragment"><a href="https://poly.google.com/" target="_blank">Poly</a>, &nbsp;<a href="https://sketchfab.com/" target="_blank">SketchFab</a></div>
+            </li>
+            <li class="fragment">
+              <p>costs of 3D models</p><img src="img/google-tiger.png" alt="3d model google tiger" style="max-height:300px"/>
+              <p class="fragment tigerCost blink relative" style="top:-280px">> 30 000 $</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="challenges-size-29" data-transition="slide">
+        <h2 class="header">Challenges</h2>
+        <div>
+          <ul>
+            <li class="fragment">
+              <p>size of models</p><img src="img/astronaut.png" alt="3d model astronaut" style="max-height:300px"/>
+              <p class="fragment blink sizeAstronaut">> 2,5MB</p>
+            </li>
+            <li class="fragment">
+              <p>lack of UI guidelines and  good practices</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="get your cardboard-30" data-transition="slide">
+        <h2 class="header">Try it yourself !!!</h2>
+        <div>
+          <ol>
+            <li class="fragment">please retweet our tweet
+              <div style="position:absolute; top:300px"><blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="en" dir="ltr">iteratec <a href="https://twitter.com/hashtag/innovationpioneers?src=hash&amp;ref_src=twsrc%5Etfw">#innovationpioneers</a> next stop is <a href="https://twitter.com/hashtag/ar?src=hash&amp;ref_src=twsrc%5Etfw">#ar</a>/<a href="https://twitter.com/hashtag/vr?src=hash&amp;ref_src=twsrc%5Etfw">#vr</a> in the browser. Want to jump in?? <a href="https://twitter.com/hashtag/dfwro19?src=hash&amp;ref_src=twsrc%5Etfw">#dfwro19</a> <a href="https://twitter.com/hashtag/devfest?src=hash&amp;ref_src=twsrc%5Etfw">#devfest</a> <a href="https://twitter.com/hashtag/webxr?src=hash&amp;ref_src=twsrc%5Etfw">#webxr</a> <a href="https://twitter.com/hashtag/wroclaw?src=hash&amp;ref_src=twsrc%5Etfw">#wroclaw</a> <a href="https://twitter.com/hashtag/conference?src=hash&amp;ref_src=twsrc%5Etfw">#conference</a> <a href="https://twitter.com/devfest_wro?ref_src=twsrc%5Etfw">@devfest_wro</a> <a href="https://t.co/xV1ktgb5e8">pic.twitter.com/xV1ktgb5e8</a></p>&mdash; iteratec (@iteratec) <a href="https://twitter.com/iteratec/status/1195008790560694281?ref_src=twsrc%5Etfw">November 14, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              </div>
+            </li>
+            <li class="fragment">visit our stand</li>
+            <li class="fragment">and collect our cardboard VR glasses</li>
+          </ol>
+        </div>
+      </section>
+      <section id="links-31" data-transition="slide">
+        <h2 class="header">Links</h2>
+        <div>
+          <div class="flex" style="align-items:flex-start">
+            <div class="fragment">
+              <h3>WebXR</h3>
+              <ul class="smaller">
+                <li><a href="https://immersive-web.github.io/" target="_blank">immersive-web.github.io</a></li>
+                <li><a href="https://www.w3.org/TR/webxr" target="_blank">www.w3.org/TR/webxr</a></li>
+                <li><a href="https://www.chromestatus.com/feature/5680169905815552" target="_blank">www.chromestatus.com</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API" target="_blank">developer.mozilla.org</a></li>
+              </ul>
+            </div>
+            <div class="fragment">
+              <h3>Frameworks</h3>
+              <ul class="smaller">
+                <li><a href="https://aframe.io/" target="_blank">A-Frame</a></li>
+                <li><a href="https://modelviewer.dev/examples/augmented-reality.html" target="_blank">Model Viewer</a></li>
+                <li><a href="https://facebook.github.io/react-360/" target="_blank">React 360</a></li>
+              </ul>
+            </div>
+            <div class="fragment">
+              <h3>Videos</h3>
+              <ul class="smaller">
+                <li><a href="https://www.youtube.com/watch?v=1t1gBVykneA" target="_blank">Google I/0 2018</a></li>
+                <li><a href="https://www.youtube.com/watch?v=MknaAnWBMCM" target="_blank">SFHTML5 2019</a></li>
+                <li><a href="https://www.youtube.com/watch?v=DQ9ddFyUv1g&amp;t=352s" target="_blank">JScamp 2018</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="first-ones-32" data-transition="slide">
+        <h2 class="header"><img src="img/innovatiopioneers.jpg"/></h2>
+        <div>
+          <div style="margin-left:22%"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Alright people. Here it is.<a href="https://t.co/5AbrrE92It">https://t.co/5AbrrE92It</a> <a href="https://t.co/bP6G87ism8">pic.twitter.com/bP6G87ism8</a></p>&mdash; Mr.doob (@mrdoob) <a href="https://twitter.com/mrdoob/status/1131817655134896128?ref_src=twsrc%5Etfw">May 24, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+        </div>
+      </section>
+      <section id="virtual-dream-33" data-transition="slide">
+        <h2 class="header">Virtual Dream Foundation</h2>
+        <div>
+          <ul>         
+            <li class="fragment">
+              <p>Develop VR/AR projects for everyday relief and support socially excluded groups</p><a href="http://virtual-dream.org/" target="blank"><img class="abs-images" src="img/virtual-dream.jpg" style="width:358px; bottom: -305px; left:0; height:104px; background-color:white; border-radius:0 0 0 " alt="virtual dream logo"/></a>
+            </li>
+            <li class="fragment">
+              <p>Please check some videos about the foundation</p><iframe style="width:40%; left:50%; max-height:320px; position:absolute; bottom: -130px;"   src="https://www.youtube.com/embed/DaPVR3PiKkE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                 
+            </li>
+            <li class="fragment">
+              <p>Share and/or support</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="credits-34" data-transition="slide">
+        <h2 class="header">Credits</h2>
+        <div>
+          <ul class="no-bullet quote credits"> 
+            <li>
+              <p>Slide 0</p>
+              <p><img src="img/around-the-corner.jpg"/></p><a href="https://www.flickr.com/photos/bruce_krasting/6789987732" target="_blank">www.flickr.com</a>
+            </li>
+            <li>
+              <p>Slide 3</p>
+              <p><img src="img/stereo.jpg"/></p><a href="https://commons.wikimedia.org/wiki/File:Sample_screen_capture_of_Oculus_rift_development_kit_2_screen_buffer.jpg" target="_blank">commons.wikimedia.org/wiki</a>
+            </li>
+            <li>
+              <p>Slides 3, 8</p>
+              <p><img src="img/oculus.png"/></p><a href="https://en.m.wikipedia.org/wiki/File:Oculus-Rift-CV1-Headset-Front.jpg" target="_blank">en.m.wikipedia.org</a>
+            </li>
+            <li>
+              <p>Slide 3</p>
+              <p><img src="img/6dof3dof.jpg"/></p><a href="https://www.qualcomm.com/news/onq/2017/08/14/advancing-inside-out-motion-tracking-immersive-mobile-vr" target="_blank">www.qualcomm.com</a>
+            </li>
+            <li>
+              <p>Slide 4</p>
+              <p> <img src="img/ar-example.png"/></p><a href="https://commons.wikimedia.org/wiki/File:10.000_Moving_Cities,_Augmented_Reality_Multiplayer_Game.png" target="_blank">commons.wikimedia.org</a>
+            </li>
+            <li>
+              <p>Slide 4</p>
+              <p><img src="img/google-glass.png"/></p><a href="https://www.blog.google/products/hardware/glass-enterprise-edition-2/" target="_blank">www.blog.google/products/hardware/glass-enterprise-edition-2/</a>
+            </li>
+            <li>
+              <p>Slide 5</p>
+              <p> <img src="img/holo.jpg"/></p><a href="https://docs.microsoft.com/de-de/windows/mixed-reality/types-of-mixed-reality-apps" target="_blank">docs.microsoft.com/de-de/windows/mixed-reality/types-of-mixed-reality-apps</a>
+            </li>
+            <li>
+              <p>Slide 9</p>
+              <p><img src="img/pokemon-go.png"/></p><a href=" www.pokemongo.com" target="_blank">www.pokemongo.com</a>
+            </li>
+            <li>
+              <p>Slide 9</p>
+              <p> <img src="img/Mozzies.png"/></p><a href="https://www.researchgate.net/figure/The-AR-Soccer-Application-with-simple-edge-tracking-Gesture-Gestures-refer-to-the_fig3_228864152" target="_blank">www.researchgate.net</a>
+            </li>
+            <li>
+              <p>Slide 14</p>
+              <p><img src="img/impossible.jpg"/></p><a href="https://www.flickr.com/photos/eastcoastgambler/13986881888" target="_blank"> www.flickr.com</a>
+            </li>
+            <li>
+              <p>Slide 14</p>
+              <p><img src="img/tools.png"/></p><a href="http://www.publicdomainfiles.com/show_file.php?id=13953806415057" target="_blank">  www.publicdomainfiles.com</a>
+            </li>
+            <li>
+              <p>Slide 20</p>
+              <p><img src="img/yes-we-can.jpg"/></p><a href="https://www.flickr.com/photos/20106852@N00/2239098608" target="_blank"> www.flickr.com</a>
+            </li>
+            <li>
+              <p>Slide 28</p>
+              <p> <img src="img/google-tiger.png"/></p><a href="https://mashable.com/article/google-search-ar-animals/?europe=true" target="_blank"> mashable.com/article/google-search-ar-animals</a>
+            </li>
+            <li> 
+              <p>Slide 29</p>
+              <p><img src="img/astronaut.png"/></p><a href="https://modelviewer.dev/examples/augmented-reality.html" target="_blank"> modelviewer.dev/examples/augmented-reality.html</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="the-end-35" data-transition="slide">
+        <h2 class="header"></h2>
+        <div>
+          <div><img src="img/theend.png" style="background:white; box-shadow:0 0 0;" alt="the end"/></div>
+          <ul class="flex no-bullet">
+            <li class="fragment">
+              <p style="text-align: right; font-size:0.8em">Paweł Kamiński<br/><a class="flex" href="https://twitter.com/kamyk_pl" style="color:black; justify-content: flex-end" target="blank"><img src="img/twitter.png" style="background:white; box-shadow:0 0 0; max-width:65px" alt="twitter logo"/>@kamyk_pl</a></p>
+            </li>
+            <li class="fragment"><a class="flex" href="https://iteratec.com"><img src="img/iteratec.svg" style="background:white; box-shadow:0 0 0; max-width:270px; margin-top:40px" alt="iteratec logo"/></a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="reveal.js-3.8.0/js/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      // controls: true,
+      // progress: true,
+      history: true,
+      center: false,
+      // center: true,
+      // rollingLinks: true,
+      // transition: "convex",
+      // width: "90%",
+      // height: 1.0,
+      dependencies: [
+          // Syntax highlight for <code> elements
+          {src: 'reveal.js-3.8.0/plugin/markdown/marked.js'},
+          {src: 'reveal.js-3.8.0/plugin/markdown/markdown.js'},
+          {src: 'reveal.js-3.8.0/plugin/notes/notes.js', async: true},
+          {src: 'reveal.js-3.8.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      ]
+    });
+  </script>
+</body>

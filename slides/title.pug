@@ -1,0 +1,24 @@
+extends layout-center.pug
+
+block vars
+  - var title = 'title'
+
+
+
+
+block content
+        div.flex
+                img(src="img/around-the-corner.jpg" alt="around the corner")
+                h2(style="font-size:1.5em; line-height:1; margin-top:10px")
+                        | AR and VR in your browser
+                        | are
+                        | just around the corner
+                        br
+                        //- span.credits(style="font-size:0.3em")
+                                | (and behind the flags )
+
+        p(style="text-align: right; font-size:0.8em") Paweł Kamiński
+                br
+                a.flex(href="https://twitter.com/kamyk_pl" style="color:black; justify-content: flex-end" target="blank")
+                        img(src="img/twitter.png" style="background:white; box-shadow:0 0 0; max-width:65px" alt="twitter logo")
+                        | @kamyk_pl

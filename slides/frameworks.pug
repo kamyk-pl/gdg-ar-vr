@@ -1,0 +1,35 @@
+extends layout.pug 
+
+block vars
+  - var title = 'frameworks'
+
+block title
+        | other frameworks
+
+block content
+        ul.logos.no-bullet
+                //- li
+                        a(href="https://aframe.io/" target="_blank") 
+                                img(src="img/aframe-logo.svg" style="height:50px;" )
+                li
+                        a(href="https://facebook.github.io/react-360/" target="_blank") 
+                                div.flex
+                                        img(src="img/react360.svg" style="box-shadow:0 0 0;")
+                                        p React 360
+                //- li
+                        a(href="https://googlewebcomponents.github.io/model-viewer/" target="_blank") 
+                                div.flex
+                                        img(src="img/model viever.svg"  style="height:95px;")
+                                        p model viewer
+                li
+                        a(href="https://www.babylonjs.com/" target="_blank") 
+                                div.flex
+                                        img(src="img/babylonjs.svg" style="box-shadow:0 0 0;" )
+                                        | BabylonJs
+                li
+                        a(href="https://threejs.org/" target="_blank" )
+                                p(style="font-family:'Roboto Mono', monospace; color: rgb(4, 158, 244)") three.js
+
+ 
+
+

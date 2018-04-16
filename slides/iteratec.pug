@@ -1,0 +1,22 @@
+extends layout.pug 
+
+block vars
+  - var title = 'iteratec'
+
+block title
+        img(src="img/iteratec.svg" style="background:white; box-shadow:0 0 0; width:270px;" alt="iteratec logo")
+block content
+        ul()
+                li iteratec is the gold sponsor of Dev Fest Wrocław
+
+                li.fragment iteratec 1996
+                li.fragment 7 locations (Munich, Dusseldorf, Frankfurt, Hamburg, Stuttgart, Vienna,
+                        img.abs-images(src="img/Standorte.png" style="left:0%")
+                        span.bold
+                                |        Wrocław
+                        |)
+                li.fragment ~ 350 employees, 20 in Wrocław office
+                        img.abs-images(src="img/iteratec-team.jpg" style="left:33%")
+                li.fragment "Innovation days"
+                        img.fragment.abs-images(src="img/stand.jpg" style="left:66%")
+

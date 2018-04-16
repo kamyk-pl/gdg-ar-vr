@@ -1,0 +1,23 @@
+extends layout.pug 
+
+block vars
+  - var title = 'challenges-lack'
+
+block title
+        | Challenges
+block content
+        ul
+            li.fragment
+                p
+                   | lack of 3D models
+                div.fragment
+                       a(href="https://poly.google.com/" target="_blank") Poly
+                       |, &nbsp;
+                       a(href="https://sketchfab.com/" target="_blank") SketchFab
+            li.fragment
+                p
+                    | costs of 3D models
+                img(src="img/google-tiger.png" alt="3d model google tiger" style="max-height:300px")
+                p.fragment.tigerCost.blink.relative(style='top:-280px') > 30 000 $
+
+

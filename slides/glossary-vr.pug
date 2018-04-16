@@ -1,0 +1,20 @@
+extends layout.pug 
+
+block vars
+  - var title = 'glossary-vr'
+
+block content
+        div
+                h2 VR - Virtual Reality
+                ul
+                    li.fragment
+                        p stereoscopic view
+                        img.abs-images(src="img/stereo.jpg" style="width:30%; left:0" alt="stereoscopic view")
+                    li.fragment
+                        p headset is required
+                        img.abs-images(src="img/oculus.png" style="width:30%; left:33%" alt="headset is required")
+                    li.fragment
+                        p view is rendered by device
+                    li.fragment
+                        p 3-DoF or 6-DoF
+                        img.abs-images(src="img/6dof3dof.jpg" style="width:30%; left:66%" alt="6dof vs 3dof")

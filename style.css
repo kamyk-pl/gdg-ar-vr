@@ -1,0 +1,207 @@
+.reveal section img.logo{
+  box-shadow: none;
+  border-color: #222;
+}
+
+.reveal section table{
+   font-size: 32px;
+}
+
+.reveal section li.nobullet{
+   list-style:none;
+}
+
+.reveal section img, .reveal section iframe {
+  margin: 0;
+  max-height: 500px;
+  max-width: 500px;
+  border: none;
+  background-color: #222;
+}
+
+
+.reveal .credits{
+  font-size: 0.6em;
+}
+
+.reveal pre {
+     width: 95%;
+}
+
+.reveal .bgImages img{
+     width: 22%;
+     margin: 5px;
+     height: 120px;
+}
+
+.reveal  div.overlay{
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    width: 750px;
+    height: 430px;
+    background-color:rgba(34, 34, 34, 0.90);
+    text-align: left;
+    padding: 20px;
+
+}
+.reveal  div.overlay a, .reveal  div.overlay a:hover, .reveal  div.overlay a:visited{
+  color: white;
+  font-size: 38px;
+}
+
+.reveal p.warn{
+ color:darkorange;
+}
+.reveal .red{
+ color:red;
+}
+.reveal .green{
+ color:green;
+}
+
+.no-bullet {
+  list-style-type: none;
+}
+
+ul.no-bullet li{
+    list-style-type: none;
+}
+
+
+.reveal .ml30 {
+  margin-left:30px;
+} 
+
+.reveal .quote{
+    font-size: 40%;
+}
+
+.reveal .flex{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.reveal .flex.aifs{
+    align-items: flex-start;
+}
+
+.reveal .flex li{
+    margin: 15px;
+}
+
+
+.reveal .logos li  {
+
+    padding: 15px;
+    text-align: center;
+
+}
+.reveal .logos img  { /*general rule*/
+
+     max-height:95px; 
+     background:white; 
+     box-shadow:0 0 0
+
+}
+
+.reveal .tac  {
+    text-align: center;
+    display: block;
+}
+
+.header{
+
+}
+
+
+.done{
+    text-decoration: line-through;
+}
+
+.current {
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+.next{
+    font-style: italic;
+}
+
+.relative{
+    position: relative;
+}
+.tigerCost {
+    color: gold;
+}
+.sizeAstronaut{
+    color: white;
+    position:absolute;
+    top:200px;
+    font-size: 0.6em;
+}
+
+.blink{
+    animation: blinker 1s infinite alternate ease-in-out;
+}
+
+.img-bottom{
+    position: absolute;
+    bottom: 0;
+
+}
+
+@keyframes blinker {
+    from {opacity: 1.0;}
+    to {opacity: 0.0;}
+}
+
+.bigger {
+    font-size:2.2em;
+}
+
+.smaller {
+    font-size:0.6em;
+}
+
+.abs-images{
+  position: absolute;
+  bottom: -170px;
+  width: 30%;
+  height: 160px;
+}
+
+
+.credits li{
+    display: flex;
+    align-items: center
+
+}
+.credits li p {
+    margin: 0px 30px;
+    min-width: 80px
+}
+
+.credits li img{
+    max-height: 30px;
+}
+
+.reveal ul.ywc{
+    background-image: url('img/yes-we-can.jpg');
+    background-repeat: no-repeat;
+    display: block;
+    height: 620px;
+    width: 100%;
+    color: white;
+}
+.reveal ul.ywc li {
+    text-transform: uppercase;
+    font-family: Arial;
+    font-weight: bolder;
+}
+
+.reveal ul.ywc li:first-child{
+    padding-top: 200px;
+    text-transform: uppercase;
+    font-family: Arial;
+}

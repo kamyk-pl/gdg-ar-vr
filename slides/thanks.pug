@@ -1,0 +1,21 @@
+extends layout.pug 
+
+block vars
+  - var title = 'the-end'
+
+block content
+        div
+            img(src="img/theend.png" style="background:white; box-shadow:0 0 0;" alt="the end")
+
+        ul.flex.no-bullet
+                li.fragment
+                        p(style="text-align: right; font-size:0.8em") Paweł Kamiński
+                                br
+                                a.flex(href="https://twitter.com/kamyk_pl" style="color:black; justify-content: flex-end" target="blank")
+                                        img(src="img/twitter.png" style="background:white; box-shadow:0 0 0; max-width:65px" alt="twitter logo")
+                                        | @kamyk_pl
+
+                li.fragment
+                        a.flex(href="https://iteratec.com")
+                                img(src="img/iteratec.svg" style="background:white; box-shadow:0 0 0; max-width:270px; margin-top:40px" alt="iteratec logo")
+

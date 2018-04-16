@@ -1,0 +1,40 @@
+extends layout.pug 
+
+block vars
+  - var title = 'links'
+
+block title
+        | Links
+
+
+block content
+        div.flex(style="align-items:flex-start")
+            div.fragment
+                h3 WebXR
+                ul.smaller
+                  li
+                      a(href="https://immersive-web.github.io/" target="_blank") immersive-web.github.io
+                  li
+                      a(href="https://www.w3.org/TR/webxr" target="_blank") www.w3.org/TR/webxr
+                  li
+                      a(href="https://www.chromestatus.com/feature/5680169905815552" target="_blank") www.chromestatus.com
+                  li
+                      a(href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API" target="_blank") developer.mozilla.org
+            div.fragment
+                h3 Frameworks
+                ul.smaller
+                    li
+                        a(href="https://aframe.io/" target="_blank") A-Frame
+                    li
+                        a(href="https://modelviewer.dev/examples/augmented-reality.html" target="_blank") Model Viewer
+                    li
+                        a(href="https://facebook.github.io/react-360/" target="_blank") React 360
+            div.fragment
+                h3 Videos
+                ul.smaller
+                    li
+                        a(href="https://www.youtube.com/watch?v=1t1gBVykneA" target="_blank") Google I/0 2018
+                    li
+                        a(href="https://www.youtube.com/watch?v=MknaAnWBMCM" target="_blank") SFHTML5 2019
+                    li
+                        a(href="https://www.youtube.com/watch?v=DQ9ddFyUv1g&t=352s" target="_blank") JScamp 2018
