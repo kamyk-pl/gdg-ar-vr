@@ -70,3 +70,13 @@
 .reveal .quote{
     font-size: 40%;
 }
+
+.bold{
+  font-weight: bolder;
+}
+
+.abs-images{
+  position: absolute;
+  bottom: -170px;
+  width: 30%;  
+}
