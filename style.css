@@ -147,8 +147,13 @@ ul.no-bullet li{
   font-weight: bolder;
 }
 
+.bigger {
+    font-size:2.2em;
+}
+
 .abs-images{
   position: absolute;
   bottom: -170px;
   width: 30%;
+  height: 160px;
 }

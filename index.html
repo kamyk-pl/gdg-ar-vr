@@ -1,12 +1,11 @@
 <!DOCTYPE html >
 <html lang="en">
   <head>
-    <title>Introduction</title>
+    <title>Web XR</title>
     <meta charset="utf-8"/>
     <meta name="author" content=" "/>
     <meta name="description" content=" AR  "/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
-    <link rel="icon" href="common/img/favicon.ico"/>
     <link href="reveal.js-3.8.0/css/reveal.css" rel="stylesheet"/>
     <link href="reveal.js-3.8.0/css/theme/white.css" rel="stylesheet"/>
     <link href="common/css/common.css" rel="stylesheet"/>
@@ -48,19 +47,21 @@
         <h2 class="header">iteratec</h2>
         <div>
           <ul>
-            <li>iteratec 1996</li>
-            <li>~ 400 in total, 20 in Wroclaw office</li>
-            <li>projects for xxxxx x dsad</li>
-            <li>iteratec is a gold sponsor of GDG Wrocław :)</li>
+            <li class="fragment">iteratec 1996</li>
+            <li class="fragment">7 locations (Munich, Dusseldorf, Frankfurt, Hamburg, Stuttgart, Vienna,<img class="abs-images" src="img/iteratec-team.jpg" style="left:0"/><span class="bold">
+                 Wroclaw</span>)</li>
+            <li class="fragment">~ 350 employees, 20 in Wroclaw office<img class="abs-images" src="img/iteratec-team.jpg" style="left:33%"/></li>
+            <li class="fragment">InnoFridays</li>
+            <li class="fragment">iteratec is a gold sponsor of GDG Wrocław :)<img class="abs-images" src="img/iteratec-team.jpg" style="left:66%"/></li>
           </ul>
         </div>
       </section>
       <section id="follow-me-3" data-transition="slide">
         <h2 class="header">Follow me</h2>
         <div>
-          <ul>
-            <li>QR Code</li>
-            <li>gif with canary flags</li>
+          <ul class="flex no-bullet">
+            <li class="fragment"><a href="https://kamyk-pl.github.io/gdg-ar-vr/#/title-0">kamyk-pl.github.io/gdg-ar-vr/</a><img src="img/qrcode.png" alt="link to presentation"/></li>
+            <li class="fragment"><img src="img/flags.gif" alt="how to set chrome flags"/></li>
           </ul>
         </div>
       </section>
@@ -75,17 +76,16 @@
             <h2>VR - Virtual Reality</h2>
             <ul>
               <li class="fragment">
-                <p>stereoscopic view</p><img class="img-bottom" src="img/stereo.jpg" style="width:30%; left:0" alt="stereoscopic view"/>
+                <p>stereoscopic view</p><img class="abs-images" src="img/stereo.jpg" style="width:30%; left:0" alt="stereoscopic view"/>
               </li>
               <li class="fragment">
-                <p>headset is required</p><img class="img-bottom" src="img/oculus.png" style="width:30%; left:33%" alt="headset is required"/>
+                <p>headset is required</p><img class="abs-images" src="img/oculus.png" style="width:30%; left:33%" alt="headset is required"/>
               </li>
               <li class="fragment">
                 <p>view is rendered by device</p>
               </li>
               <li class="fragment">
-                <p>3-DoF or 6-DoF</p>
-                <blockquote class="twitter-tweet img-bottom" style="width:30%; left:66%"><p lang="en" dir="ltr">Qualcomm slide showing the difference between 3-DoF and 6-DoF movement. Facebook’s Oculus Go is like the left one. Lenovo Mirage Solo is like the right one. But you need 6-DoF hand controls too for robust interaction (missing on both headsets). Source: <a href="https://t.co/uCBikhmXAd">https://t.co/uCBikhmXAd</a> <a href="https://t.co/7pqWi5yfwi">pic.twitter.com/7pqWi5yfwi</a></p>&mdash; Ian Hamilton (@hmltn) <a href="https://twitter.com/hmltn/status/996065757552295936?ref_src=twsrc%5Etfw">May 14, 2018</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <p>3-DoF or 6-DoF</p><img class="abs-images" src="img/6dof3dof.jpg" style="width:30%; left:66%" alt="6dof vs 3dof"/>
               </li>
             </ul>
           </div>
@@ -96,9 +96,9 @@
         <div>
           <h2>AR - Augmented Reality</h2>
           <ul>
-            <li class="fragment">real-world environment</li>
-            <li class="fragment">extend by computer generated content</li>
-            <li class="fragment">headset or mobile device required</li>
+            <li class="fragment">real world</li>
+            <li class="fragment">extend by computer generated content<img class="abs-images" src="img/google-glass.png" style="width:45%; left:0" alt="headset is required"/></li>
+            <li class="fragment">headset or mobile device required<img class="abs-images" src="img/google-glass.png" style="width:45%; left:50%" alt="google glass"/></li>
           </ul>
         </div>
       </section>
@@ -106,7 +106,7 @@
         <h2 class="header"></h2>
         <div>
           <div>
-            <h2>MR - Mixed Reality</h2>
+            <h2>MR - Mixed/Merged Reality</h2>
             <ul class="flex no-bullet">
               <li class="fragment"><a class="tac" href="https://www.microsoft.com/en-us/hololens">Microsoft Hololens</a><img src="img/holo.jpg" alt="Hololens"/></li>
               <li class="fragment"><a class="tac" href="https://www.thevoid.com/">The Void</a><iframe width="640" height="281" src="https://www.youtube.com/embed/hLhswj2zFDw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
@@ -115,7 +115,9 @@
         </div>
       </section>
       <section class="center" id="glossary-xr-8" data-transition="slide">
-        <h2 class="header">XR = VR + AR + MR + ?R</h2>
+        <h2 class="header">VR + AR + MR + ?R<span class="fragment">
+            <p>=</p>
+            <p class="bigger"> XR</p></span></h2>
         <div></div>
       </section>
       <section class="center" id="why-9" data-transition="slide">
@@ -137,19 +139,23 @@
         <h2 class="header">Been there done that</h2>
         <div>
           <ul class="flex">
-            <li class="fragment no-bullet asd"> # Pokemon Go<img src="img/pokemon-go.png" alt="Pokemon Go"/></li>
-            <li class="fragment no-bullet asd"> Siemens SX1 (2003)<img src="img/Mozzies.png" alt="Symbian Mozzies"/></li>
+            <li class="fragment no-bullet asd tac">
+              <p>Pokemon Go</p><img src="img/pokemon-go.png" alt="Pokemon Go"/>
+            </li>
+            <li class="fragment no-bullet asd tac">
+              <p>Mozzies<br/><span class="quote">Symbian OS ~ 2003</span></p><img src="img/Mozzies.png" alt="Symbian Mozzies"/>
+            </li>
           </ul>
         </div>
       </section>
       <section id="unity-12" data-transition="slide">
-        <h2 class="header">  Unity</h2>
-        <div><img class="fragment" src="img/unity.png" style="background:white" alt="Unity logo"/></div>
+        <h2 class="header"></h2>
+        <div><img src="img/unity.png" style="background:white; box-shadow:0 0 0" alt="Unity logo"/><iframe width="560" height="315" src="https://www.youtube.com/embed/RnAEO-QlqSg?start=214" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
       </section>
       <section id="unreal-13" data-transition="slide">
-        <h2 class="header">Unreal</h2>
+        <h2 class="header"></h2>
         <div>
-          <div class="flex"><img src="img/unreal.png" style="background:white" alt="Unreal logo"/><iframe width="560" height="315" src="https://www.youtube.com/embed/S14AVwaBF-Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          <div class="flex"><img src="img/unreal.png" style="background:white; box-shadow:0 0 0" alt="Unreal logo"/><iframe width="560" height="315" src="https://www.youtube.com/embed/S14AVwaBF-Y?start=80" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
         </div>
       </section>
       <section id="google-io-2019-14" data-transition="slide">
@@ -160,10 +166,17 @@
       </section>
       <section id="webxr-15" data-transition="slide">
         <h2 class="header">Web XR</h2>
-        <div></div>
+        <div>
+          <ul>
+            <li class="fragment"> The first proposed standard of &nbsp;<a href="https://www.w3.org/immersive-web/">Immersive Web</a>&nbsp; working group at W3C</li>
+            <li class="fragment">low level JavaScript API which exposes the VR platform capabilities</li>
+            <li class="fragment">successor of WebVR</li>
+            <li class="fragment">Goal: unify 3D immersive experiences using the Web</li>
+          </ul>
+        </div>
       </section>
       <section id="webxr-status-16" data-transition="slide">
-        <h2 class="header">Web XR W3C Status</h2>
+        <h2 class="header"><a href="https://www.w3.org/TR/webxr/">Web XR</a>W3C Status</h2>
         <div>
           <ul class="no-bullet">
             <li class="done"> W3C receives a Submission</li>
@@ -178,16 +191,15 @@
       </section>
       <section id="can-i-use-17" data-transition="slide">
         <h2 class="header">Can I use WebXR</h2>
-        <div><img src="img/can-i-use.jpg" alt="can i use webxr screenshot"/>
+        <div><img src="img/can-i-use.jpg" alt="can i use webxr screenshot" style="max-width: 750px;"/>
           <p class="small">Status for 2019-10-28</p>
         </div>
       </section>
-      <section id="yes-you-can-18" data-transition="slide">
-        <h2 class="header">Yes you can</h2>
+      <section id="yes-we-can-18" data-transition="slide">
+        <h2 class="header">Yes we can</h2>
         <div>
           <ul>
-            <li>Chrome Canary behind the flags</li>
-            <li>WebVR</li>
+            <li>Chrome behind the flags</li>
             <li>Web XR Polifyis</li>
             <li>Framwerorks</li>
           </ul>
@@ -279,6 +291,8 @@
               Mozzies - https://www.researchgate.net/figure/The-AR-Soccer-Application-with-simple-edge-tracking-Gesture-Gestures-refer-to-the_fig3_228864152
               Google Tiger - https://mashable.com/article/google-search-ar-animals/?europe=true
               Microsoft Hololens - https://docs.microsoft.com/de-de/windows/mixed-reality/types-of-mixed-reality-apps
+              Qualcom - https://www.qualcomm.com/news/onq/2017/08/14/advancing-inside-out-motion-tracking-immersive-mobile-vr
+              Google glass = https://www.blog.google/products/hardware/glass-enterprise-edition-2/
             </li>
           </ul>
         </div>
