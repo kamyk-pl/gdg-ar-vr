@@ -1,10 +1,9 @@
 -var transition= "slide"
 block vars
+- var pageId = title+ "-"+  counter++
 
-
-- var pageId = title+ "-"+  counter++ 
 section(id= pageId, data-transition=transition)
-  h2
+  h2.header
     block title
-  body
+  div
     block content  

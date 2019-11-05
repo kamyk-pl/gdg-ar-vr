@@ -11,9 +11,10 @@
    list-style:none;
 }
 
-.reveal section img {
-  margin: 0px 0px;
+.reveal section img, .reveal section iframe {
+  margin: 0;
   max-height: 500px;
+  max-width: 500px;
   border: none;
   background-color: #222;
 }
@@ -63,10 +64,80 @@
   list-style-type: none;
 }
 
+ul.no-bullet li{
+    list-style-type: none;
+}
+
+
 .reveal .ml30 {
   margin-left:30px;
 } 
 
 .reveal .quote{
     font-size: 40%;
+}
+
+.reveal .flex{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.reveal .flex.aifs{
+    align-items: flex-start;
+}
+
+.reveal .flex li{
+    margin: 15px;
+}
+
+.reveal .flex img  {
+
+}
+
+.reveal .tac  {
+    text-align: center;
+    display: block;
+}
+
+.header{
+
+}
+
+
+.done{
+    text-decoration: line-through;
+}
+
+.current {
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+.next{
+    font-style: italic;
+}
+
+.relative{
+    position: relative;
+}
+.tigerCost {
+    color: gold;
+}
+.sizeAstronaut{
+    color: white;
+}
+
+.blink{
+    animation: blinker 1s infinite alternate ease-in-out;
+}
+
+.img-bottom{
+    position: absolute;
+    bottom: 0;
+
+}
+
+@-webkit-keyframes blinker {
+    from {opacity: 1.0;}
+    to {opacity: 0.0;}
 }

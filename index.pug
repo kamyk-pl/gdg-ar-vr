@@ -1,11 +1,11 @@
 doctype html 
-html
+html(lang="en")
     head
         title Introduction
         meta(charset='utf-8')
         meta(name='author', content=' ')
         meta(name='description', content=' AR  ')
-        meta(name="viewport",content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui")
         link(rel="icon" href="common/img/favicon.ico")
 
         link(href='reveal.js-3.8.0/css/reveal.css', rel='stylesheet')
@@ -25,66 +25,76 @@ html
 
 
 -var counter = 0
-body
-    .reveal
-        .slides
-            include ./slides/title.pug
-            include ./slides/about-me.pug
-            include ./slides/iteratec.pug
-            include ./slides/follow-me.pug
-            include ./slides/glossary.pug
-            include ./slides/glossary-vr.pug
-            include ./slides/glossary-ar.pug
-            include ./slides/glossary-other-r.pug
-            include ./slides/why.pug
-            include ./slides/been-there-done-that.pug
-            include ./slides/unity-unreal.pug
-            include ./slides/google-io.pug
-            include ./slides/webxr.pug
-            include ./slides/webxr-status.pug
-            include ./slides/ar-vr-in-js.pug
-            include ./slides/can-i-use.pug
-            include ./slides/webvr.pug
-            include ./slides/tooling.pug
+    body
+        .reveal
+            .slides
+                include ./slides/title.pug
+                include ./slides/about-me.pug
+                include ./slides/iteratec.pug
+                include ./slides/follow-me.pug
+
+                include ./slides/glossary.pug
+                include ./slides/glossary-vr.pug
+                include ./slides/glossary-ar.pug
+                include ./slides/glossary-mr.pug
+                include ./slides/glossary-xr.pug
+                include ./slides/why.pug
+                include ./slides/been-there-done-that-vr.pug
+                include ./slides/been-there-done-that-ar.pug
+                include ./slides/unity.pug
+                include ./slides/unreal.pug
+                include ./slides/google-io.pug
+                include ./slides/webxr.pug
+                include ./slides/webxr-status.pug
+                include ./slides/can-i-use.pug
+                include ./slides/yes-you-can.pug
+                include ./slides/frameworks.pug
+                include ./slides/vs-native-pros
+                include ./slides/vs-native-cons
+                include ./slides/problems.pug
+                include ./slides/problems-2.pug
+                include ./slides/get-your-cardboard.pug
+                include ./slides/links.pug
+                include ./slides/credits.pug
+                include ./slides/virtual-dream.pug
+                include ./slides/thanks.pug
+
+                //- include ./slides/before-start2.pug2
+                //- include ./slides/title.js.pug
+                //- include ./slides/agenda.pug
+                //- include ./slides/tools/tools.pug
+                //- include ./slides/tools/visual.pug
+                //- include ./slides/tools/chrome.pug
+                //- include ./slides/tools/node.pug
+                //- include ./slides/tools/npm.pug
+                //- include ./slides/tools/debuging.pug
+                //- include ./slides/js.pug
+                //- include ./slides/async.pug
+                //-  include ./slides/testing/testing.pug
+                //- include ./slides/testing/jasmine.pug
+                //- include ./slides/testing/protractor.pug
+                //- include ./slides/missed.pug
+                //- include ./slides/agenda.for.tomorrow.pug
+                //- include ./slides/end.pug
 
 
-            //- include ./slides/before-start2.pug2
-            //- include ./slides/title.js.pug
-            //- include ./slides/agenda.pug
-            //- include ./slides/tools/tools.pug
-            //- include ./slides/tools/visual.pug
-            //- include ./slides/tools/chrome.pug
-            //- include ./slides/tools/node.pug
-            //- include ./slides/tools/npm.pug
-            //- include ./slides/tools/debuging.pug
-            //- include ./slides/js.pug
-            //- include ./slides/async.pug
-            //-  include ./slides/testing/testing.pug
-            //- include ./slides/testing/jasmine.pug
-            //- include ./slides/testing/protractor.pug
-            //- include ./slides/missed.pug
-            //- include ./slides/agenda.for.tomorrow.pug
-            //- include ./slides/end.pug
-
-
-    script(src='reveal.js-3.8.0/js/reveal.js')
-    script.
-      Reveal.initialize({
-        // controls: true,
-        // progress: true,
-        history: true,
-        // center: true,
-        // rollingLinks: true,
-        // transition: "convex",
-        // width: "90%",
-        // height: 1.0,
-        dependencies: [
-            // Syntax highlight for <code> elements
-            {src: 'reveal.js-3.3.0/plugin/markdown/marked.js'},
-            {src: 'reveal.js-3.3.0/plugin/markdown/markdown.js'},
-            {src: 'reveal.js-3.3.0/plugin/notes/notes.js', async: true},
-            {src: 'reveal.js-3.3.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-        ]
-      });
-     
-
+        script(src='reveal.js-3.8.0/js/reveal.js')
+        script.
+          Reveal.initialize({
+            // controls: true,
+            // progress: true,
+            history: true,
+            center: false,
+            // center: true,
+            // rollingLinks: true,
+            // transition: "convex",
+            // width: "90%",
+            // height: 1.0,
+            dependencies: [
+                // Syntax highlight for <code> elements
+                {src: 'reveal.js-3.8.0/plugin/markdown/marked.js'},
+                {src: 'reveal.js-3.8.0/plugin/markdown/markdown.js'},
+                {src: 'reveal.js-3.8.0/plugin/notes/notes.js', async: true},
+                {src: 'reveal.js-3.8.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            ]
+          });

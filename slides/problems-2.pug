@@ -1,0 +1,15 @@
+extends layout.pug 
+
+block vars
+  - var title = 'challenges-size'
+
+block title
+        | Challenges
+block content
+        ul
+             li.fragment
+                p
+                 | size of models
+                img(src="img/astronaut.png" alt="3d model astronaut")
+                p.relative.fragment.blink.sizeAstronaut(style='top:-500px') > 2,5MB
+
