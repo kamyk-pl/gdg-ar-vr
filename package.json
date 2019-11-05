@@ -19,10 +19,12 @@
     "compile": "node node_modules/pug-cli/index -P index.pug",
     "pug": "npm run compile",
     "watch": "npm-watch pug",
-    "work": "run-p watch  reload"
+    "work": "run-p watch  reload",
+    "deploy": "gh-pages -d ."
   },
   "private": true,
   "devDependencies": {
+    "gh-pages": "^2.1.1",
     "http-server": "^0.11.1",
     "npm-run-all": "^4.1.5",
     "reload": "^3.0.1"

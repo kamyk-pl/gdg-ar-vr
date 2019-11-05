@@ -141,3 +141,14 @@ ul.no-bullet li{
     from {opacity: 1.0;}
     to {opacity: 0.0;}
 }
+
+
+.bold{
+  font-weight: bolder;
+}
+
+.abs-images{
+  position: absolute;
+  bottom: -170px;
+  width: 30%;
+}
